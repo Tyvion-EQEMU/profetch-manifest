@@ -1,0 +1,100 @@
+# proFetch manifest — defines all components and files managed by proFetch
+# Edit this file to add/remove/update components without a proFetch code release.
+
+[meta]
+version = "1"
+
+# ── MQ directory components ────────────────────────────────────────────────────
+# Installed under mq_rekkas (configured in settings.toml or settings.local.toml)
+
+[[components]]
+id = "rekkas_mq"
+name = "Rekkas MQ Binary"
+owner = "RekkasGit"
+repo = "E3NextAndMQNextBinary"
+tracking = "commit_sha"
+branch = "main"
+destination = ""
+protected_patterns = ["config/*", "MacroQuest.ini"]
+
+[[components]]
+id = "mq2rwarp"
+name = "MQ2RWarp"
+owner = "Tyvion-EQEMU"
+repo = "MQ2RWarp"
+tracking = "release_tag"
+destination = "plugins"
+release_asset_name = "MQ2RWarp.dll"
+protected_patterns = []
+
+[[components]]
+id = "rgmercs"
+name = "RGMercs"
+owner = "DerpleDude"
+repo = "rgmercs"
+tracking = "commit_sha"
+branch = "main"
+destination = "lua/rgmercs"
+protected_patterns = ["config/*"]
+
+[[components]]
+id = "e9loot"
+name = "e9loot (proLoot)"
+owner = "Tyvion-EQEMU"
+repo = "e9loot"
+tracking = "commit_sha"
+branch = "main"
+destination = "lua/e9loot"
+zip_subdir = "e9loot"
+protected_patterns = ["config/*"]
+
+# ── EQ client directory files ──────────────────────────────────────────────────
+# Downloaded on every `profetch update` and installed into each configured eq_dir.
+# destination is relative to each EQ directory root; "" = root.
+
+[[eq_files]]
+id = "spells_us"
+name = "Spells (spells_us.txt)"
+filename = "spells_us.txt"
+url = "http://spire.eqprofusion.org:3000/api/v1/eqemuserver/export-client-file/spells"
+destination = ""
+
+[[eq_files]]
+id = "dbstr_us"
+name = "DB Strings (dbstr_us.txt)"
+filename = "dbstr_us.txt"
+url = "http://spire.eqprofusion.org:3000/api/v1/eqemuserver/export-client-file/dbstring"
+destination = ""
+
+[[eq_files]]
+id = "skillcaps"
+name = "Skill Caps (SkillCaps.txt)"
+filename = "SkillCaps.txt"
+url = "http://spire.eqprofusion.org:3000/api/v1/eqemuserver/export-client-file/skills"
+destination = "Resources"
+
+[[eq_files]]
+id = "basedata"
+name = "Base Data (BaseData.txt)"
+filename = "BaseData.txt"
+url = "http://spire.eqprofusion.org:3000/api/v1/eqemuserver/export-client-file/basedata"
+destination = "Resources"
+
+[[eq_files]]
+id = "dinput8"
+name = "DirectInput Shim (dinput8.dll)"
+filename = "dinput8.dll"
+url = "http://downloads.eqprofusion.org/dinput8.dll"
+destination = ""
+
+# ── Help packs (GitHub zip, installed to each EQ directory) ───────────────────
+# Tracked by commit SHA; only re-downloaded when updated.
+
+[[help_packs]]
+id = "profusion_help"
+name = "EQProfusion Help Files"
+owner = "Tyvion-EQEMU"
+repo = "profusion-help"
+branch = "main"
+tracking = "commit_sha"
+destination = "help"
