@@ -9,7 +9,7 @@ version = "1"
 
 [[components]]
 id = "rekkas_mq"
-name = "Rekkas MQ Binary"
+name = "MQ Install (Rekkas)"
 owner = "RekkasGit"
 repo = "E3NextAndMQNextBinary"
 tracking = "commit_sha"
