@@ -39,7 +39,7 @@ protected_patterns = ["config/*"]
 
 [[components]]
 id = "proloot"
-name = "proLoot"
+name = "ProLoot"
 owner = "Tyvion-EQEMU"
 repo = "proLoot"
 tracking = "commit_sha"
