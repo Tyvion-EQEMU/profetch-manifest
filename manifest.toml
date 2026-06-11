@@ -47,6 +47,7 @@ branch = "main"
 destination = "lua/proloot"
 zip_subdir = "proloot"
 protected_patterns = ["config/*"]
+show_version = true
 
 # ── EQ client directory files ──────────────────────────────────────────────────
 # Downloaded on every `profetch update` and installed into each configured eq_dir.
