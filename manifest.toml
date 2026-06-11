@@ -16,6 +16,7 @@ tracking = "commit_sha"
 branch = "main"
 destination = ""
 protected_patterns = ["config/*", "MacroQuest.ini"]
+show_version = true
 
 [[components]]
 id = "mq2rwarp"
@@ -36,6 +37,7 @@ tracking = "commit_sha"
 branch = "main"
 destination = "lua/rgmercs"
 protected_patterns = ["config/*"]
+show_version = true
 
 [[components]]
 id = "proloot"
