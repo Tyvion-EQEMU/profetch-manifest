@@ -4,6 +4,20 @@
 [meta]
 version = "1"
 
+# ── ProFetch patcher (self-update) ────────────────────────────────────────────
+# When an update is available, the GUI performs a bat-swap restart automatically.
+
+[[components]]
+id = "profetch"
+name = "ProFetch"
+owner = "Tyvion-EQEMU"
+repo = "ProFetch"
+tracking = "release_tag"
+release_asset_name = "profetch.exe"
+destination = ""
+protected_patterns = []
+show_version = true
+
 # ── MQ directory components ────────────────────────────────────────────────────
 # Installed under mq_rekkas (configured in settings.toml or settings.local.toml)
 
