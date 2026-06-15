@@ -1,25 +1,25 @@
-# proFetch manifest — defines all components and files managed by proFetch
-# Edit this file to add/remove/update components without a proFetch code release.
+# ProPatch manifest — defines all components and files managed by ProPatch
+# Edit this file to add/remove/update components without a ProPatch code release.
 
 [meta]
 version = "1"
 
-# ── ProFetch patcher (self-update) ────────────────────────────────────────────
-# When an update is available, the GUI performs a bat-swap restart automatically.
+# ── ProPatch patcher (self-update) ────────────────────────────────────────────
+# When an update is available, the GUI performs a ps1-swap restart automatically.
 
 [[components]]
-id = "profetch"
-name = "ProFetch"
+id = "propatch"
+name = "ProPatch"
 owner = "Tyvion-EQEMU"
-repo = "ProFetch"
+repo = "ProPatch"
 tracking = "release_tag"
-release_asset_name = "profetch.exe"
+release_asset_name = "propatch.exe"
 destination = ""
 protected_patterns = []
 show_version = true
 
 # ── MQ directory components ────────────────────────────────────────────────────
-# Installed under mq_rekkas (configured in settings.toml or settings.local.toml)
+# Installed under mq_rekkas (configured in settings.toml or settings.local.toml).
 
 [[components]]
 id = "rekkas_mq"
@@ -65,7 +65,7 @@ protected_patterns = ["config/*"]
 show_version = true
 
 # ── EQ client directory files ──────────────────────────────────────────────────
-# Downloaded on every `profetch update` and installed into each configured eq_dir.
+# Downloaded on every `propatch update` and installed into each configured eq_dir.
 # destination is relative to each EQ directory root; "" = root.
 
 [[eq_files]]
