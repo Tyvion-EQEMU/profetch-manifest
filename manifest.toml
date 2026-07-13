@@ -64,6 +64,17 @@ zip_subdir = "proloot"
 protected_patterns = ["config/*"]
 show_version = true
 
+[[components]]
+id = "protask"
+name = "ProTask"
+owner = "Tyvion-EQEMU"
+repo = "ProTask"
+tracking = "release_tag"
+destination = "lua/protask"
+zip_subdir = "protask"
+protected_patterns = []
+show_version = true
+
 # ── EQ client directory files ──────────────────────────────────────────────────
 # Downloaded on every `propatch update` and installed into each configured eq_dir.
 # destination is relative to each EQ directory root; "" = root.
