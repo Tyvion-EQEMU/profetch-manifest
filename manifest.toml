@@ -28,7 +28,7 @@ owner = "RekkasGit"
 repo = "E3NextAndMQNextBinary"
 tracking = "release_tag"
 destination = ""
-protected_patterns = ["config/*", "MacroQuest.ini"]
+protected_patterns = ["config/*", "MacroQuest.ini", "lua/buttonmaster/*"]
 show_version = true
 
 [[components]]
@@ -72,6 +72,17 @@ repo = "ProTask"
 tracking = "release_tag"
 destination = "lua/protask"
 zip_subdir = "protask"
+protected_patterns = []
+show_version = true
+
+[[components]]
+id = "buttonmaster"
+name = "ButtonMaster"
+owner = "DerpleDude"
+repo = "buttonmaster"
+tracking = "commit_sha"
+branch = "main"
+destination = "lua/buttonmaster"
 protected_patterns = []
 show_version = true
 
